@@ -98,6 +98,7 @@ export const MyStore = signalStore(
             patchState(store, { selectedFolderIds: [] })
         },
         deleteSelectedFolders() {
+            console.log("deleteSelectedFolders")
             patchState(store, { deletedFolderIds: [...deletedFolderIds(), ...selectedFolderIds()] })
         }
     }))

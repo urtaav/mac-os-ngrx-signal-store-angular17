@@ -1,7 +1,8 @@
 <div class="folders">
     @for (folder of folders(); track $index) {
-    <div class="folders__icon">
-        <app-folder-icon [folder]="folder" (click)="onFolderSelected($event)" [isFinderOpened]="isFinderOpened()" />
-    </div>
+        <div class="folders__icon" (contextmenu)="openCm($event, cm)">
+            <app-folder-icon [folder]="folder" (click)="onFolderSelected($event)" [isFinderOpened]="isFinderOpened()" />
+        </div>
     }
+    <p-contextMenu #cm [model]="items"></p-contextMenu>
 </div>
