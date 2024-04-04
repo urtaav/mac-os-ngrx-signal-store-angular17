@@ -25,12 +25,17 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles"
+              ]
+            },
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/styles/styles.scss"
             ],
             "scripts": []
           },
@@ -97,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

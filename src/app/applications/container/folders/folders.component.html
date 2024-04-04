@@ -1,0 +1,7 @@
+<div class="folders">
+    @for (folder of folders(); track $index) {
+    <div class="folders__icon">
+        <app-folder-icon [folder]="folder" (click)="onFolderSelected($event)" [isFinderOpened]="isFinderOpened()" />
+    </div>
+    }
+</div>
